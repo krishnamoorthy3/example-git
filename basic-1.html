@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*         function aliquotSum(input) {
+  // input can't be negative
+  if (input < 0) throw new TypeError('Input cannot be Negative')
+
+  // input can't be a decimal
+  if (Math.floor(input) !== input)
+    throw new TypeError('Input cannot be a Decimal')
+
+  // Dealing with 1, which isn't a prime
+  if (input === 1) console.log(0); 
+
+  let sum = 0
+  for (let i = 1; i <= input / 2; i++) {
+    if (input % i === 0) sum += i
+  }
+
+  console.log(sum); 
+}
+aliquotSum(11)  */
+    </script>
+      <p id="demo"></p>
+      <script type="module">
+        import {message,message2} from "/message.js";
+        
+        document.getElementById("demo").innerHTML = message() + " " +message2() ;
+        
+      </script>
+
+      <h1 id="h1txt"></h1>
+      <input type="text" id="inputtxt">
+      <button id="submitbtn">submit</button>
+
+      <script>
+        let username;
+
+        function inputgettxt(){
+          username=document.getElementById("inputtxt").value;
+          document.getElementById("h1txt").textContent=`Hello ${username}`
+        }
+        document.getElementById("submitbtn").onclick= inputgettxt;
+      </script>
+
+      
+</body>
+</html>
