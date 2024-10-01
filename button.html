@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn-del{
+            background: url('/images/p-1/clear.png') no-repeat  ;
+            background-size: cover;
+            height: 40px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn-del"> </button>
+    <script>
+        function catAndMouse(x, y, z) {
+            let cat1=Math.abs(x-z);
+            let cat2=Math.abs(y-z);
+            let result;
+
+            if(cat1<cat2){
+                result="Cat A"
+            }else if(cat2<cat1){
+                result="Cat B"
+            }else if(cat1==cat2){
+                result="Mouse C"
+            }
+            console.log(result)
+        }
+        catAndMouse(1, 2, 3)
+
+
+
+    function hurdleRace(k, height) {
+    // Write your code here
+        let result= height.sort(function(a, b){return a-b});
+        result.reverse()
+        console.log(result);
+        let output;
+        if(result[0]<=k){
+            output=0
+        }else{
+            output=result[0]-k
+        }
+        console.log(output);
+    }
+    hurdleRace(53, [86, 4 ,83 ,20 ,6 ,81 ,58 ,59 ,53 ,2, 54, 62, 25, 35, 79, 64 ,27 ,49, 32, 95 ,100, 20, 58, 39, 92 ,30, 67 ,89 ,58 ,81 ,100 ,66, 73 ,29 ,75 ,81 ,70, 55, 18, 28, 7 ,35 ,98, 52, 30 ,11 ,69, 48 ,84 ,54 ,13 ,14 ,15 ,86 ,34 ,82 ,92 ,26 ,8 ,53 ,62 ,57 ,50 ,31 ,61 ,85 ,88 ,5 ,80 ,64 ,90 ,52 ,47 ,43 ,40 ,93, 69, 70 ,16 ,43 ,7 ,25 ,99 ,12, 63, 99, 71, 76,55, 17 ,90, 43, 27 ,20 ,42, 84, 39 ,96, 75, 1])
+    
+
+
+
+    function viralAdvertising(n) {
+    // Write your code here
+    let result=2;
+    let count=2;
+    for(let i=1;i<n;i++){
+        if(i<n){
+            result=(result*3)
+            if(result%2===0){
+                result=result/2
+            }else if(result%2!==0){
+                result=(result-1)/2
+            }
+        }
+        count+=result
+    }
+    console.log(count);
+}
+viralAdvertising(3)
+
+
+/* function circularArrayRotation(a, k, queries) {
+    // Write your code here
+        
+}
+circularArrayRotation([1,2,3], 2, [0,1,2]) */
+
+let number = 124;
+let digits = number.toString().split('').map(Number);
+console.log(digits); 
+
+
+function extraLongFactorials(n) {
+    // Write your code here
+    let result=1;
+    for(let i=n;i>0;i--){
+
+        if(i>=1){
+            result=result*i
+            console.log(result); 
+        }
+    }
+    console.log(result);  
+/*     let result = BigInt(1); // Use BigInt to handle large numbers
+    for (let i = BigInt(n); i > 0; i--) {
+        result *= i;
+    }
+    console.log(Number(result)); // Output the result as a Number */
+}
+
+
+extraLongFactorials(25)
+
+
+
+
+/* function appendAndDelete(s, t, k) {
+    // Write your code here
+    let result;
+    if(s.length+k>= t.length ){
+        result="Yes"
+    }else{
+        result="No"
+    }
+    console.log(result);
+}
+appendAndDelete("hackerhappy", "hackerrank", 9) */
+
+
+function libraryFine(d1, m1, y1, d2, m2, y2) {
+    const oneDay = 24 * 60 * 60 * 1000; 
+
+    const date1 = new Date(`${d1}/${m1}/${y1}`);
+    const date2 = new Date(`${d2}/${m2}/${y2}`);
+    const diffMilliseconds = Math.abs(date1 - date2);
+    const Days = Math.round(diffMilliseconds / oneDay);
+    console.log(Days);
+}
+libraryFine(9, 6, 2015, 6, 6, 2015)
+
+
+function cutTheSticks(arr) {
+    // Write your code here
+
+}
+cutTheSticks([5, 4, 4, 2, 2, 8])
+    </script>
+</body>
+</html>
